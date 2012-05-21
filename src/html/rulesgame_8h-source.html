@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>/home/alan/workspace/Luawar/src/rulesgame.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/alan/workspace/Luawar/src/rulesgame.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2009 by Alan de Oliveira Silva Gabriel Vedana Queiroz   *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   habeas_corpse@yahoo.com.br                                            *</span>
+<a name="l00004"></a>00004 <span class="comment"> *                                                                         *</span>
+<a name="l00005"></a>00005 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00006"></a>00006 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00007"></a>00007 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00009"></a>00009 <span class="comment"> *                                                                         *</span>
+<a name="l00010"></a>00010 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00012"></a>00012 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                                                         *</span>
+<a name="l00015"></a>00015 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00017"></a>00017 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00019"></a>00019 <span class="comment"> ***************************************************************************/</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef RULESRULES_H</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define RULESRULES_H</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;pthread.h&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include "defs.h"</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include "event.h"</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "videorender.h"</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include "package.h"</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include "person.h"</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include "map.h"</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include "aicontrol.h"</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include "api.h"</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include "layermanager.h"</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include "particlecache.h"</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include "particlesystem.h"</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include "sound.h"</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include "bullet.h"</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include "bulletmanager.h"</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include "contact.h"</span>
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;luabind/luabind.hpp&gt;</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;Box2D/Box2D.h&gt;</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">namespace </span>Rules {
+<a name="l00047"></a>00047 
+<a name="l00059"></a><a class="code" href="class_rules_1_1_rules_game.html">00059</a> <span class="keyword">class </span><a class="code" href="class_rules_1_1_rules_game.html">RulesGame</a>{
+<a name="l00060"></a>00060         <span class="keyword">public</span>:
+<a name="l00064"></a>00064                 <a class="code" href="class_rules_1_1_rules_game.html#7043e5ee46cd80451f0b1ae8cf1def5d" title="RulesGame é o Construtor que requer um mapa em sua construcão.">RulesGame</a>(<a class="code" href="class_scenario_1_1_map.html">Scenario::Map</a>* map,<a class="code" href="class_scenario_1_1_map.html">Scenario::Map</a>* map2);
+<a name="l00068"></a>00068                 <a class="code" href="class_rules_1_1_rules_game.html#f85c31eb29887e8a42a8137d9eff2656" title="Destrutor do RulesGame, não requer parâmetro.">~RulesGame</a>();
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_rules_1_1_rules_game.html#090670804fcb64ac9cc1c20cd4787482" title="inicializa o subsistema de Regras do Jogo.">init</a>();
+<a name="l00077"></a><a class="code" href="class_rules_1_1_rules_game.html#ad81e178276352b145eed802edad0b3c">00077</a>                 <span class="keywordtype">bool</span> <a class="code" href="class_rules_1_1_rules_game.html#ad81e178276352b145eed802edad0b3c" title="Termina o Subsistema de Regras do Jogo.">running</a>;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079         <span class="keyword">private</span>:
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081                 <span class="keywordtype">void</span> loop();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083                 <span class="comment">// Rules</span>
+<a name="l00084"></a>00084                 <span class="keywordtype">void</span> eventAnalyzer();
+<a name="l00085"></a>00085                 <span class="keywordtype">void</span> scrolling();
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087                 <span class="keywordtype">void</span> particleAnalyzer();
+<a name="l00088"></a>00088                 <span class="keywordtype">void</span> addParticle(<span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY,SDL_Surface* img[20], <span class="keywordtype">int</span> time,<span class="keywordtype">string</span> soundFile);
+<a name="l00089"></a>00089                 list&lt;Render::ParticleSystem *&gt; psystem;
+<a name="l00090"></a>00090                 <span class="keywordtype">int</span> numberParticle;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092                 <span class="keywordtype">void</span> bulletAnalyzer();
+<a name="l00093"></a>00093                 <span class="keywordtype">void</span> addBullet(<span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY,SDL_Surface* img,<span class="keywordtype">string</span> soundFile);
+<a name="l00094"></a>00094                 list&lt;Bullet *&gt; bulletList;
+<a name="l00095"></a>00095                 <span class="keywordtype">int</span> numberBullet;
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098                 <span class="comment">// threads variables</span>
+<a name="l00099"></a>00099                 <a class="code" href="class_events_1_1_event.html">Events::Event</a>* event;
+<a name="l00100"></a>00100                 Render::VideoRender *render;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102                 <span class="comment">//Person</span>
+<a name="l00103"></a>00103                 Person* person;
+<a name="l00104"></a>00104                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpLastMov;
+<a name="l00105"></a>00105                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lastMov;
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107                 <span class="comment">//IA</span>
+<a name="l00108"></a>00108                 <a class="code" href="class_a_i_1_1_ai_control.html">AI::AiControl</a> *aiControl;
+<a name="l00109"></a>00109                 <a class="code" href="class_a_i_1_1_object_a_i.html">AI::ObjectAI</a> *ia1;
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111         <span class="comment">// Map</span>
+<a name="l00112"></a>00112                 <a class="code" href="class_render_1_1_package.html">Render::Package</a> *pkgMap;
+<a name="l00113"></a>00113                 <a class="code" href="class_render_1_1_package.html">Render::Package</a> *pkgMap2;
+<a name="l00114"></a>00114                 <a class="code" href="class_scenario_1_1_map.html">Scenario::Map</a> *map;
+<a name="l00115"></a>00115                 <a class="code" href="class_scenario_1_1_map.html">Scenario::Map</a> *map2;
+<a name="l00116"></a>00116                 SDL_Rect *mapSrcRect;
+<a name="l00117"></a>00117                 SDL_Rect *mapDestRect;
+<a name="l00118"></a>00118                 SDL_Rect *map2SrcRect;
+<a name="l00119"></a>00119                 SDL_Rect *map2DestRect;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122                 <span class="comment">//BackGround and Foreground</span>
+<a name="l00123"></a>00123                 Scenario::BgLayer* Backgound;
+<a name="l00124"></a>00124                 Scenario::BgLayer* Background2;
+<a name="l00125"></a>00125                 Scenario::BgLayer* ForeGround1;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127                 <a class="code" href="class_render_1_1_package.html">Render::Package</a> *pkgLogo;
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129                 <span class="comment">//Screen</span>
+<a name="l00130"></a>00130                 <span class="keywordtype">int</span> midScreenX,midScreenY;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132                 <span class="comment">// Lua</span>
+<a name="l00133"></a>00133                 lua_State *L;
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135                 <span class="comment">//Physics</span>
+<a name="l00136"></a>00136                 b2World* world;
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138                 <span class="comment">//Particle System</span>
+<a name="l00139"></a>00139                 Render::ParticleCache *pcache1;
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141                 <span class="comment">//Bullets</span>
+<a name="l00142"></a>00142                 BulletManager *bmanager;
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144                 Scenario::Sound *sound;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 };
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 }
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

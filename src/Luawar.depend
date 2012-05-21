@@ -1,0 +1,2004 @@
+# depslib dependency file v1.0
+1259787384 source:/home/alan/workspace/Luawar/src/action.cpp
+	"action.h"
+
+1259285486 /home/alan/workspace/Luawar/src/action.h
+	<list>
+	<pthread.h>
+	<iostream>
+
+1260579793 source:/home/alan/workspace/Luawar/src/aicontrol.cpp
+	"aicontrol.h"
+
+1259799499 /home/alan/workspace/Luawar/src/aicontrol.h
+	<list>
+	<pthread.h>
+	"defs.h"
+	"map.h"
+	"objectai.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1260552566 /home/alan/workspace/Luawar/src/defs.h
+
+1259637840 /home/alan/workspace/Luawar/src/map.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	"tileset.h"
+	<Box2D.h>
+
+1253367954 /home/alan/workspace/Luawar/src/tileset.h
+	<string>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+
+1260578810 /home/alan/workspace/Luawar/src/objectai.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	"defs.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"defs.h"
+	"person.h"
+	"map.h"
+
+1260579910 /home/alan/workspace/Luawar/src/person.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<vector>
+	"defs.h"
+	"package.h"
+	"video.h"
+	"map.h"
+	"coreobjects.h"
+	"particlesystem.h"
+	<Box2D.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1260384594 /home/alan/workspace/Luawar/src/package.h
+	"defs.h"
+	<SDL/SDL.h>
+	<iostream>
+
+1259799596 /home/alan/workspace/Luawar/src/video.h
+	<iostream>
+	<SDL/SDL.h>
+	<SDL_image.h>
+	"defs.h"
+
+1260491059 source:/home/alan/workspace/Luawar/src/editor.cpp
+	"editor.h"
+
+1259779638 /home/alan/workspace/Luawar/src/editor.h
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"map.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+	"coreobjects.h"
+
+1259765148 /home/alan/workspace/Luawar/src/event.h
+	<pthread.h>
+	"defs.h"
+	"joystick.h"
+	"keyboard.h"
+	"action.h"
+
+1242404110 /home/alan/workspace/Luawar/src/joystick.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	"defs.h"
+	"action.h"
+
+1242404114 /home/alan/workspace/Luawar/src/keyboard.h
+	<SDL/SDL.h>
+	<iostream>
+	"defs.h"
+	"action.h"
+
+1260371987 /home/alan/workspace/Luawar/src/videorender.h
+	<iostream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	"video.h"
+	"renderpriority.h"
+	"package.h"
+	<SDL_rotozoom.h>
+
+1259146786 /home/alan/workspace/Luawar/src/renderpriority.h
+	<list>
+	<iostream>
+	<pthread.h>
+	<SDL/SDL.h>
+	"package.h"
+
+1259765212 source:/home/alan/workspace/Luawar/src/event.cpp
+	"event.h"
+
+1242404108 source:/home/alan/workspace/Luawar/src/joystick.cpp
+	"joystick.h"
+
+1259763530 source:/home/alan/workspace/Luawar/src/keyboard.cpp
+	"keyboard.h"
+
+1260598200 source:/home/alan/workspace/Luawar/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"video.h"
+	"videorender.h"
+	"editor.h"
+	"rulesgame.h"
+	"tileset.h"
+	"tileseteditor.h"
+	"button.h"
+	<guichan.hpp>
+	<guichan/sdl.hpp>
+
+1260597979 /home/alan/workspace/Luawar/src/rulesgame.h
+	<SDL/SDL.h>
+	<pthread.h>
+	<list>
+	"defs.h"
+	"event.h"
+	"videorender.h"
+	"package.h"
+	"person.h"
+	"map.h"
+	"aicontrol.h"
+	"api.h"
+	"layermanager.h"
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+	"bullet.h"
+	"bulletmanager.h"
+	"contact.h"
+	"refparticle.h"
+	"coreobjects.h"
+	"particlelua.h"
+	<luabind/luabind.hpp>
+	<Box2D.h>
+	<guichan.hpp>
+	<guichan/sdl.hpp>
+	"objectmanager.h"
+
+1260243104 /home/alan/workspace/Luawar/src/tileseteditor.h
+	<pthread.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	"defs.h"
+	"event.h"
+	"tileset.h"
+	"coreobjects.h"
+	"videorender.h"
+	"package.h"
+	<guichan.hpp>
+	<guichan/sdl.hpp>
+
+1260556349 source:/home/alan/workspace/Luawar/src/map.cpp
+	"map.h"
+
+1259775610 source:/home/alan/workspace/Luawar/src/objectai.cpp
+	"objectai.h"
+
+1260579986 source:/home/alan/workspace/Luawar/src/person.cpp
+	"person.h"
+
+1259693400 source:/home/alan/workspace/Luawar/src/renderpriority.cpp
+	"renderpriority.h"
+
+1260636421 source:/home/alan/workspace/Luawar/src/rulesgame.cpp
+	"rulesgame.h"
+
+1253367782 source:/home/alan/workspace/Luawar/src/tileset.cpp
+	"tileset.h"
+
+1260501843 source:/home/alan/workspace/Luawar/src/tileseteditor.cpp
+	"tileseteditor.h"
+
+1260327167 source:/home/alan/workspace/Luawar/src/video.cpp
+	"video.h"
+
+1260388741 source:/home/alan/workspace/Luawar/src/videorender.cpp
+	"videorender.h"
+
+1246473890 source:/media/KINGSTON/workspace/Luawar/src/action.cpp
+	"action.h"
+
+1254946808 /media/KINGSTON/workspace/Luawar/src/action.h
+	<list>
+	<pthread.h>
+	<iostream>
+
+1253382434 source:/media/KINGSTON/workspace/Luawar/src/aicontrol.cpp
+	"aicontrol.h"
+
+1253350304 /media/KINGSTON/workspace/Luawar/src/aicontrol.h
+	<list>
+	<pthread.h>
+	"defs.h"
+	"map.h"
+	"objectai.h"
+
+1249086328 /media/KINGSTON/workspace/Luawar/src/defs.h
+
+1254605608 /media/KINGSTON/workspace/Luawar/src/map.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	"tileset.h"
+	<Box2D/Box2D.h>
+
+1253396754 /media/KINGSTON/workspace/Luawar/src/tileset.h
+	<string>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+
+1256599158 /media/KINGSTON/workspace/Luawar/src/objectai.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"defs.h"
+	"person.h"
+	"map.h"
+
+1256582190 /media/KINGSTON/workspace/Luawar/src/person.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<vector>
+	"defs.h"
+	"package.h"
+	"video.h"
+	"map.h"
+	<Box2D/Box2D.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1255822752 /media/KINGSTON/workspace/Luawar/src/package.h
+	"defs.h"
+	<iostream>
+
+1256599944 /media/KINGSTON/workspace/Luawar/src/video.h
+	<iostream>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	"defs.h"
+
+1256748864 source:/media/KINGSTON/workspace/Luawar/src/editor.cpp
+	"editor.h"
+
+1242489666 /media/KINGSTON/workspace/Luawar/src/editor.h
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"map.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1242432902 /media/KINGSTON/workspace/Luawar/src/event.h
+	<pthread.h>
+	"defs.h"
+	"joystick.h"
+	"keyboard.h"
+	"action.h"
+
+1242432910 /media/KINGSTON/workspace/Luawar/src/joystick.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	"defs.h"
+	"action.h"
+
+1242432914 /media/KINGSTON/workspace/Luawar/src/keyboard.h
+	<SDL/SDL.h>
+	<iostream>
+	"defs.h"
+	"action.h"
+
+1244054576 /media/KINGSTON/workspace/Luawar/src/videorender.h
+	<iostream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	"video.h"
+	"renderpriority.h"
+	"package.h"
+
+1246642084 /media/KINGSTON/workspace/Luawar/src/renderpriority.h
+	<list>
+	<iostream>
+	<pthread.h>
+	<SDL/SDL.h>
+	"package.h"
+
+1242446138 source:/media/KINGSTON/workspace/Luawar/src/event.cpp
+	"event.h"
+
+1242432908 source:/media/KINGSTON/workspace/Luawar/src/joystick.cpp
+	"joystick.h"
+
+1248802188 source:/media/KINGSTON/workspace/Luawar/src/keyboard.cpp
+	"keyboard.h"
+
+1256751240 source:/media/KINGSTON/workspace/Luawar/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"video.h"
+	"editor.h"
+	"rulesgame.h"
+	"tileset.h"
+	"tileseteditor.h"
+
+1256751648 /media/KINGSTON/workspace/Luawar/src/rulesgame.h
+	<SDL/SDL.h>
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"videorender.h"
+	"package.h"
+	"person.h"
+	"map.h"
+	"aicontrol.h"
+	<luabind/luabind.hpp>
+	<Box2D/Box2D.h>
+
+1247348344 /media/KINGSTON/workspace/Luawar/src/tileseteditor.h
+	<pthread.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL.h>
+	"defs.h"
+	"event.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1255070390 source:/media/KINGSTON/workspace/Luawar/src/map.cpp
+	"map.h"
+
+1256599128 source:/media/KINGSTON/workspace/Luawar/src/objectai.cpp
+	"objectai.h"
+
+1256611558 source:/media/KINGSTON/workspace/Luawar/src/person.cpp
+	"person.h"
+
+1255825516 source:/media/KINGSTON/workspace/Luawar/src/renderpriority.cpp
+	"renderpriority.h"
+
+1256820802 source:/media/KINGSTON/workspace/Luawar/src/rulesgame.cpp
+	"rulesgame.h"
+
+1253396582 source:/media/KINGSTON/workspace/Luawar/src/tileset.cpp
+	"tileset.h"
+
+1250314524 source:/media/KINGSTON/workspace/Luawar/src/tileseteditor.cpp
+	"tileseteditor.h"
+
+1256749248 source:/media/KINGSTON/workspace/Luawar/src/video.cpp
+	"video.h"
+
+1248110896 source:/media/KINGSTON/workspace/Luawar/src/videorender.cpp
+	"videorender.h"
+
+1259629839 source:/home/alan/Luawar/src/action.cpp
+	"action.h"
+
+1259285486 /home/alan/Luawar/src/action.h
+	<list>
+	<pthread.h>
+	<iostream>
+
+1259689810 source:/home/alan/Luawar/src/aicontrol.cpp
+	"aicontrol.h"
+
+1259603346 /home/alan/Luawar/src/aicontrol.h
+	<list>
+	<pthread.h>
+	"defs.h"
+	"map.h"
+	"objectai.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259692721 /home/alan/Luawar/src/defs.h
+
+1259637839 /home/alan/Luawar/src/map.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	"tileset.h"
+	<Box2D.h>
+
+1253367954 /home/alan/Luawar/src/tileset.h
+	<string>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+
+1259677074 /home/alan/Luawar/src/objectai.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	"defs.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"defs.h"
+	"person.h"
+	"map.h"
+
+1259677059 /home/alan/Luawar/src/person.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<vector>
+	"defs.h"
+	"package.h"
+	"video.h"
+	"map.h"
+	"coreobjects.h"
+	"particlesystem.h"
+	<Box2D.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1259165664 /home/alan/Luawar/src/package.h
+	"defs.h"
+	<SDL/SDL.h>
+	<iostream>
+
+1259232178 /home/alan/Luawar/src/video.h
+	<iostream>
+	<SDL/SDL.h>
+	<SDL_image.h>
+	"defs.h"
+
+1259144066 source:/home/alan/Luawar/src/event.cpp
+	"event.h"
+
+1259143822 /home/alan/Luawar/src/event.h
+	<pthread.h>
+	"defs.h"
+	"joystick.h"
+	"keyboard.h"
+	"action.h"
+
+1242404110 /home/alan/Luawar/src/joystick.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	"defs.h"
+	"action.h"
+
+1242404114 /home/alan/Luawar/src/keyboard.h
+	<SDL/SDL.h>
+	<iostream>
+	"defs.h"
+	"action.h"
+
+1242404108 source:/home/alan/Luawar/src/joystick.cpp
+	"joystick.h"
+
+1257173862 source:/home/alan/Luawar/src/keyboard.cpp
+	"keyboard.h"
+
+1259694093 source:/home/alan/Luawar/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"video.h"
+	"editor.h"
+	"rulesgame.h"
+	"tileset.h"
+	"tileseteditor.h"
+
+1259637338 /home/alan/Luawar/src/editor.h
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"map.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1244025776 /home/alan/Luawar/src/videorender.h
+	<iostream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	"video.h"
+	"renderpriority.h"
+	"package.h"
+
+1259146786 /home/alan/Luawar/src/renderpriority.h
+	<list>
+	<iostream>
+	<pthread.h>
+	<SDL/SDL.h>
+	"package.h"
+
+1259687465 /home/alan/Luawar/src/rulesgame.h
+	<SDL/SDL.h>
+	<pthread.h>
+	<list>
+	"defs.h"
+	"event.h"
+	"videorender.h"
+	"package.h"
+	"person.h"
+	"map.h"
+	"aicontrol.h"
+	"api.h"
+	"layermanager.h"
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+	"bullet.h"
+	"bulletmanager.h"
+	"contact.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<luabind/luabind.hpp>
+	<Box2D.h>
+
+1259232864 /home/alan/Luawar/src/tileseteditor.h
+	<pthread.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	"defs.h"
+	"event.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1259671656 source:/home/alan/Luawar/src/map.cpp
+	"map.h"
+
+1259693644 source:/home/alan/Luawar/src/person.cpp
+	"person.h"
+
+1259693400 source:/home/alan/Luawar/src/renderpriority.cpp
+	"renderpriority.h"
+
+1253367782 source:/home/alan/Luawar/src/tileset.cpp
+	"tileset.h"
+
+1259218526 source:/home/alan/Luawar/src/tileseteditor.cpp
+	"tileseteditor.h"
+
+1259698070 source:/home/alan/Luawar/src/video.cpp
+	"video.h"
+
+1259693447 source:/home/alan/Luawar/src/videorender.cpp
+	"videorender.h"
+
+1259670586 source:/home/alan/Luawar/src/editor.cpp
+	"editor.h"
+
+1259677076 source:/home/alan/Luawar/src/objectai.cpp
+	"objectai.h"
+
+1259693490 source:/home/alan/Luawar/src/rulesgame.cpp
+	"rulesgame.h"
+
+1259633270 /home/alan/Luawar/src/api.h
+	<luabind/luabind.hpp>
+	"person.h"
+	"map.h"
+	"defs.h"
+	"particlecache.h"
+	"bulletmanager.h"
+	"aicontrol.h"
+	<string>
+	<iostream>
+
+1260587434 /home/alan/workspace/Luawar/src/api.h
+	<luabind/luabind.hpp>
+	"person.h"
+	"map.h"
+	"defs.h"
+	"particlecache.h"
+	"bulletmanager.h"
+	"aicontrol.h"
+	<string>
+	<iostream>
+	"object.h"
+	"objectmanager.h"
+	"particlelua.h"
+
+1259692222 source:/home/alan/workspace/Luawar/src/particlesystem.cpp
+	"particlesystem.h"
+
+1260582605 /home/alan/workspace/Luawar/src/particlesystem.h
+	<SDL.h>
+	<list>
+	"package.h"
+	"videorender.h"
+	"particlecache.h"
+
+1235099159 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1235099159 /usr/include/SDL/SDL_platform.h
+
+1235099159 /usr/include/SDL/begin_code.h
+
+1235099159 /usr/include/SDL/close_code.h
+
+1235099159 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_keysym.h
+
+1235099159 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1235099159 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1259145256 source:/home/alan/workspace/Luawar/src/layermanager.cpp
+	"layermanager.h"
+
+1259143076 /home/alan/workspace/Luawar/src/layermanager.h
+	<string>
+	<iostream>
+	"video.h"
+	"defs.h"
+	"package.h"
+
+1259145256 source:/home/alan/Luawar/src/layermanager.cpp
+	"layermanager.h"
+
+1259143076 /home/alan/Luawar/src/layermanager.h
+	<string>
+	<iostream>
+	"video.h"
+	"defs.h"
+	"package.h"
+
+1259692221 source:/home/alan/Luawar/src/particlesystem.cpp
+	"particlesystem.h"
+
+1259609726 /home/alan/Luawar/src/particlesystem.h
+	<SDL.h>
+	<list>
+	"package.h"
+	"videorender.h"
+	"particlecache.h"
+
+1259607974 /home/alan/Luawar/src/particlecache.h
+	<list>
+	<string>
+	"video.h"
+	"defs.h"
+	"package.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259781560 /home/alan/workspace/Luawar/src/particlecache.h
+	<list>
+	<string>
+	"video.h"
+	"defs.h"
+	"package.h"
+	<SDL_mixer.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1260324253 source:/home/alan/workspace/Luawar/src/particlecache.cpp
+	"particlecache.h"
+
+1260407357 source:/home/alan/workspace/Luawar/src/sound.cpp
+	"sound.h"
+
+1259735838 /home/alan/workspace/Luawar/src/sound.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	<SDL_mixer.h>
+
+1150375112 /usr/include/lua50/lua.h
+	<stdarg.h>
+	<stddef.h>
+
+1049376934 /usr/include/lua50/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1047990266 /usr/include/lua50/lualib.h
+	"lua.h"
+
+1202785916 /usr/include/SDL/SDL_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1225926379 /usr/include/SDL/SDL_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1235099159 /usr/include/SDL/SDL_types.h
+	"SDL_stdinc.h"
+
+1186441190 /usr/include/SDL/SDL_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1218029412 /usr/include/lua5.1/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1241012993 /usr/include/lua5.1/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<unistd.h>
+	<io.h>
+	<stdio.h>
+	<stdio.h>
+	<readline/readline.h>
+	<readline/history.h>
+	<assert.h>
+	<math.h>
+	<unistd.h>
+
+1198760545 /usr/include/lua5.1/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1198760545 /usr/include/lua5.1/lualib.h
+	"lua.h"
+
+1259486882 /home/alan/Luawar/src/sound.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	<SDL_mixer.h>
+
+1259686004 source:/home/alan/Luawar/src/particlecache.cpp
+	"particlecache.h"
+
+1259471188 source:/home/alan/Luawar/src/sound.cpp
+	"sound.h"
+
+1259684920 source:/home/alan/workspace/Luawar/src/bullet.cpp
+	"bullet.h"
+
+1259589784 /home/alan/workspace/Luawar/src/bullet.h
+	"defs.h"
+	<Box2D.h>
+	"package.h"
+	<string>
+	<SDL/SDL.h>
+	"videorender.h"
+
+1259734794 /home/alan/workspace/Luawar/src/bulletmanager.h
+	<string>
+	<SDL/SDL.h>
+	"video.h"
+	"defs.h"
+	<SDL_mixer.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259734866 source:/home/alan/workspace/Luawar/src/bulletmanager.cpp
+	"bulletmanager.h"
+
+1260580763 /home/alan/workspace/Luawar/src/contact.h
+	"defs.h"
+	"objectai.h"
+	"bullet.h"
+	<Box2D.h>
+	<string>
+
+1260591708 /home/alan/workspace/Luawar/src/refparticle.h
+	"particlecache.h"
+	"particlesystem.h"
+	"particlelua.h"
+	"sound.h"
+
+1260591735 source:/home/alan/workspace/Luawar/src/refparticle.cpp
+	"refparticle.h"
+
+1260579026 /home/alan/workspace/Luawar/src/coreobjects.h
+	<SDL/SDL.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"videorender.h"
+	"map.h"
+	"sound.h"
+	"refparticle.h"
+	"particlecache.h"
+	"event.h"
+
+1260499691 /usr/include/Box2D/Box2D.h
+	"Common/b2Settings.h"
+	"Collision/Shapes/b2CircleShape.h"
+	"Collision/Shapes/b2PolygonShape.h"
+	"Collision/b2BroadPhase.h"
+	"Dynamics/b2WorldCallbacks.h"
+	"Dynamics/b2World.h"
+	"Dynamics/b2Body.h"
+	"Dynamics/Contacts/b2Contact.h"
+	"Dynamics/Joints/b2DistanceJoint.h"
+	"Dynamics/Joints/b2MouseJoint.h"
+	"Dynamics/Joints/b2PrismaticJoint.h"
+	"Dynamics/Joints/b2RevoluteJoint.h"
+	"Dynamics/Joints/b2PulleyJoint.h"
+	"Dynamics/Joints/b2GearJoint.h"
+
+1259629839 source:/home/alan/Luawar (2)/src/action.cpp
+	"action.h"
+
+1259285486 /home/alan/Luawar (2)/src/action.h
+	<list>
+	<pthread.h>
+	<iostream>
+
+1259609504 source:/home/alan/Luawar (2)/src/aicontrol.cpp
+	"aicontrol.h"
+
+1259603346 /home/alan/Luawar (2)/src/aicontrol.h
+	<list>
+	<pthread.h>
+	"defs.h"
+	"map.h"
+	"objectai.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259668684 /home/alan/Luawar (2)/src/defs.h
+
+1259637839 /home/alan/Luawar (2)/src/map.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	"tileset.h"
+	<Box2D.h>
+
+1253367954 /home/alan/Luawar (2)/src/tileset.h
+	<string>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+
+1259589886 /home/alan/Luawar (2)/src/objectai.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	"defs.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"defs.h"
+	"person.h"
+	"map.h"
+
+1259589722 /home/alan/Luawar (2)/src/coreobjects.h
+	<SDL/SDL.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"videorender.h"
+	"map.h"
+	"sound.h"
+	"refparticle.h"
+	"particlecache.h"
+
+1244025776 /home/alan/Luawar (2)/src/videorender.h
+	<iostream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	"video.h"
+	"renderpriority.h"
+	"package.h"
+
+1259232178 /home/alan/Luawar (2)/src/video.h
+	<iostream>
+	<SDL/SDL.h>
+	<SDL_image.h>
+	"defs.h"
+
+1259146786 /home/alan/Luawar (2)/src/renderpriority.h
+	<list>
+	<iostream>
+	<pthread.h>
+	<SDL/SDL.h>
+	"package.h"
+
+1259165664 /home/alan/Luawar (2)/src/package.h
+	"defs.h"
+	<SDL/SDL.h>
+	<iostream>
+
+1259486882 /home/alan/Luawar (2)/src/sound.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	<SDL_mixer.h>
+
+1259609428 /home/alan/Luawar (2)/src/refparticle.h
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+
+1259607974 /home/alan/Luawar (2)/src/particlecache.h
+	<list>
+	<string>
+	"video.h"
+	"defs.h"
+	"package.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259609726 /home/alan/Luawar (2)/src/particlesystem.h
+	<SDL.h>
+	<list>
+	"package.h"
+	"videorender.h"
+	"particlecache.h"
+
+1259670747 /home/alan/Luawar (2)/src/person.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<vector>
+	"defs.h"
+	"package.h"
+	"video.h"
+	"map.h"
+	"coreobjects.h"
+	"particlesystem.h"
+	<Box2D.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1259479412 source:/home/alan/Luawar (2)/src/bullet.cpp
+	"bullet.h"
+
+1259589784 /home/alan/Luawar (2)/src/bullet.h
+	"defs.h"
+	<Box2D.h>
+	"package.h"
+	<string>
+	<SDL/SDL.h>
+	"videorender.h"
+
+1259491744 source:/home/alan/Luawar (2)/src/bulletmanager.cpp
+	"bulletmanager.h"
+
+1259589796 /home/alan/Luawar (2)/src/bulletmanager.h
+	<string>
+	<SDL/SDL.h>
+	"video.h"
+	"defs.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259144066 source:/home/alan/Luawar (2)/src/event.cpp
+	"event.h"
+
+1259143822 /home/alan/Luawar (2)/src/event.h
+	<pthread.h>
+	"defs.h"
+	"joystick.h"
+	"keyboard.h"
+	"action.h"
+
+1242404110 /home/alan/Luawar (2)/src/joystick.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	"defs.h"
+	"action.h"
+
+1242404114 /home/alan/Luawar (2)/src/keyboard.h
+	<SDL/SDL.h>
+	<iostream>
+	"defs.h"
+	"action.h"
+
+1242404108 source:/home/alan/Luawar (2)/src/joystick.cpp
+	"joystick.h"
+
+1257173862 source:/home/alan/Luawar (2)/src/keyboard.cpp
+	"keyboard.h"
+
+1259145256 source:/home/alan/Luawar (2)/src/layermanager.cpp
+	"layermanager.h"
+
+1259143076 /home/alan/Luawar (2)/src/layermanager.h
+	<string>
+	<iostream>
+	"video.h"
+	"defs.h"
+	"package.h"
+
+1259670857 source:/home/alan/Luawar (2)/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"video.h"
+	"editor.h"
+	"rulesgame.h"
+	"tileset.h"
+	"tileseteditor.h"
+
+1259637338 /home/alan/Luawar (2)/src/editor.h
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"map.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1259604408 /home/alan/Luawar (2)/src/rulesgame.h
+	<SDL/SDL.h>
+	<pthread.h>
+	<list>
+	"defs.h"
+	"event.h"
+	"videorender.h"
+	"package.h"
+	"person.h"
+	"map.h"
+	"aicontrol.h"
+	"api.h"
+	"layermanager.h"
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+	"bullet.h"
+	"bulletmanager.h"
+	"contact.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<luabind/luabind.hpp>
+	<Box2D.h>
+
+1259633270 /home/alan/Luawar (2)/src/api.h
+	<luabind/luabind.hpp>
+	"person.h"
+	"map.h"
+	"defs.h"
+	"particlecache.h"
+	"bulletmanager.h"
+	"aicontrol.h"
+	<string>
+	<iostream>
+
+1259635055 /home/alan/Luawar (2)/src/contact.h
+	"defs.h"
+	"objectai.h"
+	"bullet.h"
+	<Box2D.h>
+	<string>
+
+1259232864 /home/alan/Luawar (2)/src/tileseteditor.h
+	<pthread.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	"defs.h"
+	"event.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1259638013 source:/home/alan/Luawar (2)/src/map.cpp
+	"map.h"
+
+1259631976 source:/home/alan/Luawar (2)/src/objectai.cpp
+	"objectai.h"
+
+1259400340 source:/home/alan/Luawar (2)/src/particlecache.cpp
+	"particlecache.h"
+
+1259609806 source:/home/alan/Luawar (2)/src/particlesystem.cpp
+	"particlesystem.h"
+
+1259670716 source:/home/alan/Luawar (2)/src/person.cpp
+	"person.h"
+
+1259609656 source:/home/alan/Luawar (2)/src/refparticle.cpp
+	"refparticle.h"
+
+1255796716 source:/home/alan/Luawar (2)/src/renderpriority.cpp
+	"renderpriority.h"
+
+1259670822 source:/home/alan/Luawar (2)/src/rulesgame.cpp
+	"rulesgame.h"
+
+1259471188 source:/home/alan/Luawar (2)/src/sound.cpp
+	"sound.h"
+
+1253367782 source:/home/alan/Luawar (2)/src/tileset.cpp
+	"tileset.h"
+
+1259218526 source:/home/alan/Luawar (2)/src/tileseteditor.cpp
+	"tileseteditor.h"
+
+1259130302 source:/home/alan/Luawar (2)/src/video.cpp
+	"video.h"
+
+1259130344 source:/home/alan/Luawar (2)/src/videorender.cpp
+	"videorender.h"
+
+1259670586 source:/home/alan/Luawar (2)/src/editor.cpp
+	"editor.h"
+
+1259687126 /home/alan/Luawar/src/coreobjects.h
+	<SDL/SDL.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"videorender.h"
+	"map.h"
+	"sound.h"
+	"refparticle.h"
+	"particlecache.h"
+
+1259609428 /home/alan/Luawar/src/refparticle.h
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+
+1259684920 source:/home/alan/Luawar/src/bullet.cpp
+	"bullet.h"
+
+1259589784 /home/alan/Luawar/src/bullet.h
+	"defs.h"
+	<Box2D.h>
+	"package.h"
+	<string>
+	<SDL/SDL.h>
+	"videorender.h"
+
+1259684649 source:/home/alan/Luawar/src/bulletmanager.cpp
+	"bulletmanager.h"
+
+1259589796 /home/alan/Luawar/src/bulletmanager.h
+	<string>
+	<SDL/SDL.h>
+	"video.h"
+	"defs.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259609656 source:/home/alan/Luawar/src/refparticle.cpp
+	"refparticle.h"
+
+1259675221 /home/alan/Luawar/src/contact.h
+	"defs.h"
+	"objectai.h"
+	"bullet.h"
+	<Box2D.h>
+	<string>
+
+1259629839 source:/home/alan/workspace/Luawar (2)/src/action.cpp
+	"action.h"
+
+1259285486 /home/alan/workspace/Luawar (2)/src/action.h
+	<list>
+	<pthread.h>
+	<iostream>
+
+1259689810 source:/home/alan/workspace/Luawar (2)/src/aicontrol.cpp
+	"aicontrol.h"
+
+1259603346 /home/alan/workspace/Luawar (2)/src/aicontrol.h
+	<list>
+	<pthread.h>
+	"defs.h"
+	"map.h"
+	"objectai.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259720490 /home/alan/workspace/Luawar (2)/src/defs.h
+
+1259637839 /home/alan/workspace/Luawar (2)/src/map.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	"tileset.h"
+	<Box2D.h>
+
+1253367954 /home/alan/workspace/Luawar (2)/src/tileset.h
+	<string>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+
+1259677074 /home/alan/workspace/Luawar (2)/src/objectai.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	"defs.h"
+	"coreobjects.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"defs.h"
+	"person.h"
+	"map.h"
+
+1259687126 /home/alan/workspace/Luawar (2)/src/coreobjects.h
+	<SDL/SDL.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	"videorender.h"
+	"map.h"
+	"sound.h"
+	"refparticle.h"
+	"particlecache.h"
+
+1244025776 /home/alan/workspace/Luawar (2)/src/videorender.h
+	<iostream>
+	<SDL/SDL.h>
+	<list>
+	"defs.h"
+	"video.h"
+	"renderpriority.h"
+	"package.h"
+
+1259232178 /home/alan/workspace/Luawar (2)/src/video.h
+	<iostream>
+	<SDL/SDL.h>
+	<SDL_image.h>
+	"defs.h"
+
+1259146786 /home/alan/workspace/Luawar (2)/src/renderpriority.h
+	<list>
+	<iostream>
+	<pthread.h>
+	<SDL/SDL.h>
+	"package.h"
+
+1259165664 /home/alan/workspace/Luawar (2)/src/package.h
+	"defs.h"
+	<SDL/SDL.h>
+	<iostream>
+
+1259486882 /home/alan/workspace/Luawar (2)/src/sound.h
+	<string.h>
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<sstream>
+	<SDL/SDL.h>
+	"defs.h"
+	<SDL_mixer.h>
+
+1259609428 /home/alan/workspace/Luawar (2)/src/refparticle.h
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+
+1259607974 /home/alan/workspace/Luawar (2)/src/particlecache.h
+	<list>
+	<string>
+	"video.h"
+	"defs.h"
+	"package.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259609726 /home/alan/workspace/Luawar (2)/src/particlesystem.h
+	<SDL.h>
+	<list>
+	"package.h"
+	"videorender.h"
+	"particlecache.h"
+
+1259677059 /home/alan/workspace/Luawar (2)/src/person.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	<vector>
+	"defs.h"
+	"package.h"
+	"video.h"
+	"map.h"
+	"coreobjects.h"
+	"particlesystem.h"
+	<Box2D.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1259684920 source:/home/alan/workspace/Luawar (2)/src/bullet.cpp
+	"bullet.h"
+
+1259589784 /home/alan/workspace/Luawar (2)/src/bullet.h
+	"defs.h"
+	<Box2D.h>
+	"package.h"
+	<string>
+	<SDL/SDL.h>
+	"videorender.h"
+
+1259684649 source:/home/alan/workspace/Luawar (2)/src/bulletmanager.cpp
+	"bulletmanager.h"
+
+1259589796 /home/alan/workspace/Luawar (2)/src/bulletmanager.h
+	<string>
+	<SDL/SDL.h>
+	"video.h"
+	"defs.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1259670586 source:/home/alan/workspace/Luawar (2)/src/editor.cpp
+	"editor.h"
+
+1259637338 /home/alan/workspace/Luawar (2)/src/editor.h
+	<pthread.h>
+	"defs.h"
+	"event.h"
+	"map.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1259143822 /home/alan/workspace/Luawar (2)/src/event.h
+	<pthread.h>
+	"defs.h"
+	"joystick.h"
+	"keyboard.h"
+	"action.h"
+
+1242404110 /home/alan/workspace/Luawar (2)/src/joystick.h
+	<SDL/SDL.h>
+	<iostream>
+	<string>
+	"defs.h"
+	"action.h"
+
+1242404114 /home/alan/workspace/Luawar (2)/src/keyboard.h
+	<SDL/SDL.h>
+	<iostream>
+	"defs.h"
+	"action.h"
+
+1259144066 source:/home/alan/workspace/Luawar (2)/src/event.cpp
+	"event.h"
+
+1242404108 source:/home/alan/workspace/Luawar (2)/src/joystick.cpp
+	"joystick.h"
+
+1257173862 source:/home/alan/workspace/Luawar (2)/src/keyboard.cpp
+	"keyboard.h"
+
+1259145256 source:/home/alan/workspace/Luawar (2)/src/layermanager.cpp
+	"layermanager.h"
+
+1259143076 /home/alan/workspace/Luawar (2)/src/layermanager.h
+	<string>
+	<iostream>
+	"video.h"
+	"defs.h"
+	"package.h"
+
+1259698325 source:/home/alan/workspace/Luawar (2)/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"video.h"
+	"editor.h"
+	"rulesgame.h"
+	"tileset.h"
+	"tileseteditor.h"
+
+1259687465 /home/alan/workspace/Luawar (2)/src/rulesgame.h
+	<SDL/SDL.h>
+	<pthread.h>
+	<list>
+	"defs.h"
+	"event.h"
+	"videorender.h"
+	"package.h"
+	"person.h"
+	"map.h"
+	"aicontrol.h"
+	"api.h"
+	"layermanager.h"
+	"particlecache.h"
+	"particlesystem.h"
+	"sound.h"
+	"bullet.h"
+	"bulletmanager.h"
+	"contact.h"
+	"refparticle.h"
+	"coreobjects.h"
+	<luabind/luabind.hpp>
+	<Box2D.h>
+
+1259633270 /home/alan/workspace/Luawar (2)/src/api.h
+	<luabind/luabind.hpp>
+	"person.h"
+	"map.h"
+	"defs.h"
+	"particlecache.h"
+	"bulletmanager.h"
+	"aicontrol.h"
+	<string>
+	<iostream>
+
+1259675221 /home/alan/workspace/Luawar (2)/src/contact.h
+	"defs.h"
+	"objectai.h"
+	"bullet.h"
+	<Box2D.h>
+	<string>
+
+1259232864 /home/alan/workspace/Luawar (2)/src/tileseteditor.h
+	<pthread.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	"defs.h"
+	"event.h"
+	"tileset.h"
+	"videorender.h"
+	"package.h"
+
+1259671656 source:/home/alan/workspace/Luawar (2)/src/map.cpp
+	"map.h"
+
+1259677076 source:/home/alan/workspace/Luawar (2)/src/objectai.cpp
+	"objectai.h"
+
+1259686004 source:/home/alan/workspace/Luawar (2)/src/particlecache.cpp
+	"particlecache.h"
+
+1259692221 source:/home/alan/workspace/Luawar (2)/src/particlesystem.cpp
+	"particlesystem.h"
+
+1259693644 source:/home/alan/workspace/Luawar (2)/src/person.cpp
+	"person.h"
+
+1259609656 source:/home/alan/workspace/Luawar (2)/src/refparticle.cpp
+	"refparticle.h"
+
+1259693400 source:/home/alan/workspace/Luawar (2)/src/renderpriority.cpp
+	"renderpriority.h"
+
+1259693490 source:/home/alan/workspace/Luawar (2)/src/rulesgame.cpp
+	"rulesgame.h"
+
+1259471188 source:/home/alan/workspace/Luawar (2)/src/sound.cpp
+	"sound.h"
+
+1253367782 source:/home/alan/workspace/Luawar (2)/src/tileset.cpp
+	"tileset.h"
+
+1259218526 source:/home/alan/workspace/Luawar (2)/src/tileseteditor.cpp
+	"tileseteditor.h"
+
+1259698070 source:/home/alan/workspace/Luawar (2)/src/video.cpp
+	"video.h"
+
+1259693447 source:/home/alan/workspace/Luawar (2)/src/videorender.cpp
+	"videorender.h"
+
+1260238773 /home/alan/workspace/Luawar/src/button.h
+	<guichan.hpp>
+	<guichan/sdl.hpp>
+
+1260372063 /home/alan/workspace/Luawar/src/objectmanager.h
+	<string>
+	<SDL/SDL.h>
+	"video.h"
+	"defs.h"
+	<SDL_mixer.h>
+	<SDL_rotozoom.h>
+	"object.h"
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+
+1210159906 /usr/include/SDL/SDL_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1260372000 /home/alan/workspace/Luawar/src/object.h
+	"defs.h"
+	<Box2D.h>
+	"package.h"
+	<string>
+	<SDL/SDL.h>
+	"videorender.h"
+	"coreobjects.h"
+
+1260495929 source:/home/alan/workspace/Luawar/src/object.cpp
+	"object.h"
+
+1260372959 source:/home/alan/workspace/Luawar/src/objectmanager.cpp
+	"objectmanager.h"
+
+1260499181 /usr/include/Box2D/Common/b2Settings.h
+	<assert.h>
+	<math.h>
+	<stdio.h>
+	<string.h>
+	"jtypes.h"
+	"Fixed.h"
+
+1205203848 /usr/include/Box2D/Common/jtypes.h
+	<stdint.h>
+
+1205807774 /usr/include/Box2D/Common/Fixed.h
+	<stdio.h>
+	"nds.h"
+	<execinfo.h>
+	<signal.h>
+	<exception>
+
+1207882858 /usr/include/Box2D/Collision/Shapes/b2CircleShape.h
+	"b2Shape.h"
+
+1208015094 /usr/include/Box2D/Collision/Shapes/b2Shape.h
+	"../../Common/b2Math.h"
+	"../b2Collision.h"
+
+1207625704 /usr/include/Box2D/Common/b2Math.h
+	"b2Settings.h"
+	<cmath>
+	<cfloat>
+	<cstdlib>
+	<stdio.h>
+
+1207022676 /usr/include/Box2D/Collision/b2Collision.h
+	"../Common/b2Math.h"
+	<climits>
+
+1207884058 /usr/include/Box2D/Collision/Shapes/b2PolygonShape.h
+	"b2Shape.h"
+
+1205199756 /usr/include/Box2D/Collision/b2BroadPhase.h
+	"../Common/b2Settings.h"
+	"b2Collision.h"
+	"b2PairManager.h"
+	<climits>
+
+1206665518 /usr/include/Box2D/Collision/b2PairManager.h
+	"../Common/b2Settings.h"
+	"../Common/b2Math.h"
+	<climits>
+
+1207974046 /usr/include/Box2D/Dynamics/b2WorldCallbacks.h
+	"../Common/b2Settings.h"
+
+1207885074 /usr/include/Box2D/Dynamics/b2World.h
+	"../Common/b2Math.h"
+	"../Common/b2BlockAllocator.h"
+	"../Common/b2StackAllocator.h"
+	"b2ContactManager.h"
+	"b2WorldCallbacks.h"
+
+1206665496 /usr/include/Box2D/Common/b2BlockAllocator.h
+	"b2Settings.h"
+
+1195783918 /usr/include/Box2D/Common/b2StackAllocator.h
+	"b2Settings.h"
+
+1200977456 /usr/include/Box2D/Dynamics/b2ContactManager.h
+	"../Collision/b2BroadPhase.h"
+	"../Dynamics/Contacts/b2NullContact.h"
+
+1201145870 /usr/include/Box2D/Dynamics/Contacts/b2NullContact.h
+	"../../Common/b2Math.h"
+	"b2Contact.h"
+
+1207022676 /usr/include/Box2D/Dynamics/Contacts/b2Contact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+
+1208015476 /usr/include/Box2D/Dynamics/b2Body.h
+	"../Common/b2Math.h"
+	"../Collision/Shapes/b2Shape.h"
+	"Joints/b2Joint.h"
+	<memory>
+
+1208015544 /usr/include/Box2D/Dynamics/Joints/b2Joint.h
+	"../../Common/b2Math.h"
+
+1206674922 /usr/include/Box2D/Dynamics/Joints/b2DistanceJoint.h
+	"b2Joint.h"
+
+1206672762 /usr/include/Box2D/Dynamics/Joints/b2MouseJoint.h
+	"b2Joint.h"
+
+1206672762 /usr/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h
+	"b2Joint.h"
+
+1206903664 /usr/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h
+	"b2Joint.h"
+
+1206672762 /usr/include/Box2D/Dynamics/Joints/b2PulleyJoint.h
+	"b2Joint.h"
+
+1206672762 /usr/include/Box2D/Dynamics/Joints/b2GearJoint.h
+	"b2Joint.h"
+
+1260595068 /home/alan/workspace/Luawar/src/particlelua.h
+	<list>
+	<string>
+	<SDL_gfxPrimitives.h>
+	<pthread.h>
+	"package.h"
+	"videorender.h"
+	<cstdlib>
+	<ctime>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	<lua50/lua.h>
+	<lua50/lauxlib.h>
+	<lua50/lualib.h>
+	<luabind/luabind.hpp>
+
+1210159906 /usr/include/SDL/SDL_gfxPrimitives.h
+	<math.h>
+	"SDL.h"
+
+1260595192 source:/home/alan/workspace/Luawar/src/particlelua.cpp
+	"particlelua.h"
+

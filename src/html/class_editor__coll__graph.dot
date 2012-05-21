@@ -1,0 +1,22 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Editor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="pkgMap\npkgMap2\npkgMap3\npkgGrid\npkgTile\npkgInf",fontname="FreeSans"];
+  Node2 [label="Render::Package",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_render_1_1_package.html"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="event",fontname="FreeSans"];
+  Node3 [label="Events::Event",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_events_1_1_event.html"];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="action",fontname="FreeSans"];
+  Node4 [label="Rules::Action",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_rules_1_1_action.html"];
+  Node5 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="render",fontname="FreeSans"];
+  Node5 [label="Render::VideoRender",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Render::Video",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_render_1_1_video.html"];
+  Node7 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="priority",fontname="FreeSans"];
+  Node7 [label="Render::RenderPriority",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_render_1_1_render_priority.html"];
+  Node8 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="map\nmap2\nmap3",fontname="FreeSans"];
+  Node8 [label="Scenario::Map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scenario_1_1_map.html"];
+  Node9 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="tileset",fontname="FreeSans"];
+  Node9 [label="Scenario::Tileset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scenario_1_1_tileset.html"];
+}

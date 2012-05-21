@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>/home/alan/workspace/Luawar/src/map.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/alan/workspace/Luawar/src/map.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz   *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   habeas_corpse@yahoo.com.br   *</span>
+<a name="l00004"></a>00004 <span class="comment"> *                                                                         *</span>
+<a name="l00005"></a>00005 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00006"></a>00006 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00007"></a>00007 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00009"></a>00009 <span class="comment"> *                                                                         *</span>
+<a name="l00010"></a>00010 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00012"></a>00012 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                                                         *</span>
+<a name="l00015"></a>00015 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00017"></a>00017 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00019"></a>00019 <span class="comment"> ***************************************************************************/</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef SCENARIOMAP_H</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define SCENARIOMAP_H</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "defs.h"</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include "tileset.h"</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;Box2D/Box2D.h&gt;</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">using namespace </span>std;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">namespace </span>Scenario {
+<a name="l00045"></a><a class="code" href="class_scenario_1_1_map.html">00045</a> <span class="keyword">class </span><a class="code" href="class_scenario_1_1_map.html">Map</a>{
+<a name="l00046"></a>00046         <span class="keyword">public</span>:
+<a name="l00050"></a>00050                 <a class="code" href="class_scenario_1_1_map.html#8715fb17681b809f1b77a85b30cbcba7" title="Construtor padrão de Map.">Map</a>();
+<a name="l00054"></a>00054                 <a class="code" href="class_scenario_1_1_map.html#baca4e35fe76eb78b83e975f7197b98f" title="Destrutor que encerra todas as variáveis e ponteiros de Map.">~Map</a>();
+<a name="l00055"></a>00055 
+<a name="l00059"></a>00059                 <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_map.html#91ba9061c68ccfc7079b32b27e449e65" title="Carrega o Mapa de um arquivo passado por parâmetro.">loadMap</a>(<span class="keywordtype">string</span> filename);
+<a name="l00063"></a>00063                 <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_map.html#16b8c7a150902c236cd5f084185d6f7d" title="Salva o Mapa em um arquivo passado por parâmetro.">saveMap</a>(<span class="keywordtype">string</span> filename);
+<a name="l00067"></a>00067                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#a8fee0d12c0d2c9d7a5941359c07a96c" title="Seta o tamanho X do Mapa, e zera todos os atributos.">setX</a>(<span class="keywordtype">int</span> x);
+<a name="l00071"></a>00071                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#f1bed20e3fa3d13d15bfefd14cb24a52" title="Seta o tamanho Y do Mapa, e zera todos os atributos.">setY</a>(<span class="keywordtype">int</span> y);
+<a name="l00075"></a>00075                 <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_map.html#3a0cc7d12a86ca796eb1d22340719208" title="Retorna o tamanho X do mapa.">getX</a>();
+<a name="l00079"></a>00079                 <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_map.html#983028c883047ccb020bafdab9f9d11a" title="Retorna o tamanho Y do mapa.">getY</a>();
+<a name="l00083"></a>00083                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#fd284e8a3affd37f1a7caee4b276fed1" title="Seta o tamanho X e Y do Mapa, e zera todos os atributos.">setXY</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);
+<a name="l00087"></a>00087                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#0783965ab446eb3f7db575ff66695173" title="Muda o nome do arquivo, mas não salva.">setFileName</a>(<span class="keywordtype">string</span> filename);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089                 <span class="keywordtype">void</span> setTilesetName(<span class="keywordtype">string</span> filename);
+<a name="l00090"></a>00090 
+<a name="l00094"></a>00094                 <span class="keywordtype">string</span> <a class="code" href="class_scenario_1_1_map.html#051fe48e0e64b0432ab5d242580b60d3" title="retorna o nome do arquivo de mapa atual">getFileName</a>();
+<a name="l00098"></a>00098                 <span class="keywordtype">string</span> <a class="code" href="class_scenario_1_1_map.html#58b2bfcae80ddcc4d238fe04df31c7fb" title="retorna o nome do arquivo de tileset atual">getTilesetName</a>();
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 
+<a name="l00105"></a>00105                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#be434ebe415bf057baa1c0e30f03797b" title="Função que pinta uma partícula do mapa, utilizando os parâmetros da posição...">drawParticle</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> tbase5,SDL_Surface* imgMap,SDL_Surface* imgTile);
+<a name="l00106"></a>00106 
+<a name="l00110"></a><a class="code" href="class_scenario_1_1_map.html#cbd86fb2eff82ead7fb7d8381c2b8271">00110</a>                 <span class="keywordtype">int</span>** <a class="code" href="class_scenario_1_1_map.html#cbd86fb2eff82ead7fb7d8381c2b8271" title="Esta variável é a matriz que armazena os dados de propriedade do mapa.">map</a>;
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112                 <span class="keywordtype">int</span> getValue(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00115"></a>00115                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#9ddb128e682ddeea4948de9e81e92624">makeMatrix</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);
+<a name="l00119"></a>00119                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_map.html#13b967773b3ac09b1218f7c76187e08f" title="Desenha o Mapa no superfícei passada por parâmetro.">drawMap</a>(SDL_Surface* imgMap,SDL_Surface* imgTile);
+<a name="l00123"></a><a class="code" href="class_scenario_1_1_map.html#9e6eeee2a3e243c99f150438232ff7df">00123</a>                 <a class="code" href="class_scenario_1_1_tileset.html">Tileset</a>* <a class="code" href="class_scenario_1_1_map.html#9e6eeee2a3e243c99f150438232ff7df" title="Objeto do Tileset.">tileset</a>;
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125                 <span class="keywordtype">void</span> createBodies(b2World* world);
+<a name="l00126"></a>00126         <span class="keyword">private</span>:
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129                 <span class="keywordtype">string</span> fileName;
+<a name="l00130"></a>00130                 <span class="keywordtype">string</span> tilesetName;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132                 <span class="keywordtype">int</span> procString(<span class="keywordtype">string</span> str);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> X, Y;
+<a name="l00135"></a>00135                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> strcount;
+<a name="l00136"></a>00136                 <span class="keywordtype">string</span> buffer;
+<a name="l00137"></a>00137                 <span class="keywordtype">char</span> bf[5];
+<a name="l00138"></a>00138                 <span class="keywordtype">int</span> flag;
+<a name="l00139"></a>00139                 <span class="keywordtype">int</span> px,py;
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 };
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 }
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

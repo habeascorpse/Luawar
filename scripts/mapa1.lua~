@@ -1,0 +1,12 @@
+--Carregador de IA nas fases
+--     (Arquivo de configuração das IA, Posição X, Posição Y, Arquivo de script da Inteligencia Artificial)
+
+--ailoader:addAI("../scripts/impire.lua",100,0,"../scripts/IA.lua")
+--ailoader:addAI("../scripts/Lobisomens.lua",319,622,"../scripts/IA.lua")
+--ailoader:addAI("../scripts/briel.lua",200,100,"../scripts/IA.lua")
+ailoader:addAI("../scripts/Lobisomens.lua",1312,810,"../scripts/IA.lua")
+ailoader:addAI("../scripts/impire.lua",1800,270,"../scripts/IA.lua")
+ailoader:addAI("../scripts/impire.lua",2335,430,"../scripts/IA.lua")
+ailoader:addAI("../scripts/Thago.lua",2245,810,"../scripts/iamaster.lua")
+
+

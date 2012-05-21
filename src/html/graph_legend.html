@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Legenda do grafo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Legenda do grafo</h1>Esta página explica como interpretar os grafos gerados pelo doxygen.<p>
+Considere o seguinte exemplo: <div class="fragment"><pre class="fragment"><span class="comment">/*! Esta classe vai estar escondida devido à truncação */</span>
+<span class="keyword">class </span>Invisible { };
+<span class="comment"></span>
+<span class="comment">/*! Esta classe tem a relação de herança escondida */</span>
+<span class="keyword">class </span>Truncated : <span class="keyword">public</span> Invisible { };
+
+<span class="comment">/* Classe não documentada por comentários doxygen */</span>
+<span class="keyword">class </span>Undocumented { };
+<span class="comment"></span>
+<span class="comment">/*! Classe derivada usando derivação pública */</span>
+<span class="keyword">class </span>PublicBase : <span class="keyword">public</span> Truncated { };
+<span class="comment"></span>
+<span class="comment">/*! A template class */</span>
+<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span>Templ { };
+<span class="comment"></span>
+<span class="comment">/*! Classe derivada usando derivação protegida */</span>
+<span class="keyword">class </span>ProtectedBase { };
+<span class="comment"></span>
+<span class="comment">/*! Classe derivada usando derivação privada */</span>
+<span class="keyword">class </span>PrivateBase { };
+<span class="comment"></span>
+<span class="comment">/*! Classe usada pela classe Inherited */</span>
+<span class="keyword">class </span>Used { };
+<span class="comment"></span>
+<span class="comment">/*! Super classe que deriva de várias classes */</span>
+<span class="keyword">class </span>Inherited : <span class="keyword">public</span> PublicBase,
+                  <span class="keyword">protected</span> ProtectedBase,
+                  <span class="keyword">private</span> PrivateBase,
+                  <span class="keyword">public</span> Undocumented,
+                  <span class="keyword">public</span> Templ&lt;int&gt;
+{
+  <span class="keyword">private</span>:
+    Used *m_usedClass;
+};
+</pre></div> Se no ficheiro de configuração estiver a tag <code>MAX_DOT_GRAPH_HEIGHT</code> com o valor de 200 então o seguinte grafo será gerado:<p>
+<center><div align="center">
+<img src="graph_legend.png" alt="graph_legend.png">
+</div>
+</center> <p>
+As caixas no grafo anterior têm as seguintes interpretações: <ul>
+<li>
+Uma caixa inteiramente preta representa a estrutura ou a classe para a qual o grafo foi gerado. </li>
+<li>
+Uma caixa com borda preta representa uma estrutura ou classe documentada. </li>
+<li>
+Uma caixa com borda cinzenta representa uma estrutura ou classe não documentada. </li>
+<li>
+Uma caixa com borda vermelha representa uma estrutura ou classe documentada onde nem todas as relações de herança/encapsulamento são exibidas. Um grafo é truncado quando não cabe na sua área predefinida. </li>
+</ul>
+As setas têm a seguinte interpretação: <ul>
+<li>
+Uma seta azul escura representa uma relação de herança pública entre duas classes. </li>
+<li>
+Uma seta verde escura representa uma relação de herança protegida. </li>
+<li>
+Uma seta vermelha escura representa uma relação de herança privada. </li>
+<li>
+Uma seta rocha em tracejado representa uma relação de encapsulamento ou uso por parte de outra classe. A legenda da seta contém o nome da variável ou variáveis da relação. A seta aponta da classe que estabelece a relação para a classe ou estrutura que é acessível. </li>
+</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

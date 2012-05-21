@@ -1,0 +1,5 @@
+for time = 1, plua:getNum(), 1 do
+    plua:setX(time,math.random(100))
+    plua:setY(time,math.random(100))
+    plua:setColor(time,math.random(35000))
+end

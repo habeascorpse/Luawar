@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>/home/alan/workspace/Luawar/src/defs.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/alan/workspace/Luawar/src/defs.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues,  *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   Gabriel Vedana Queiroz                                                *</span>
+<a name="l00004"></a>00004 <span class="comment"> *   habeas_corpse@yahoo.com.br                                            *</span>
+<a name="l00005"></a>00005 <span class="comment"> *                                                                         *</span>
+<a name="l00006"></a>00006 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00007"></a>00007 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00009"></a>00009 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00010"></a>00010 <span class="comment"> *                                                                         *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00012"></a>00012 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00014"></a>00014 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00015"></a>00015 <span class="comment"> *                                                                         *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00017"></a>00017 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00019"></a>00019 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00020"></a>00020 <span class="comment"> ***************************************************************************/</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#ifndef DEFS_H</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#define DEFS_H</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="preprocessor">#define LUA50 0</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
+<a name="l00027"></a>00027 <span class="comment">// General Definitions</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#define SUCCESS                 1</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">#define ERROR                   0</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span>
+<a name="l00031"></a>00031 <span class="preprocessor">#define KEYBOARD  1</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">#define JOYSTICK  2</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span><span class="preprocessor">#define TIME_EVENT 20</span>
+<a name="l00034"></a>00034 <span class="preprocessor"></span><span class="preprocessor">#define TIME_RENDER 20</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define TIME_RULES  20</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span>
+<a name="l00037"></a>00037 <span class="preprocessor">#define MAX_INT 32500</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#define MIN_INT -32500</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#define LIMIT   65200</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor">#define MAX_SPEEDX 8</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#define MAX_SPEEDY 25</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 <span class="comment">// Render Definitions</span>
+<a name="l00044"></a>00044 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DF_WIDTH =  640;
+<a name="l00045"></a>00045 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DF_HEIGHT = 480;
+<a name="l00046"></a>00046 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DF_DEPTH   =32;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="comment">// Map Definitions</span>
+<a name="l00049"></a>00049 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TILE_SIZE =32;
+<a name="l00050"></a>00050 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTINUE  =1;
+<a name="l00051"></a>00051 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> BREAK     =2;
+<a name="l00052"></a>00052 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TILESET_X =8;
+<a name="l00053"></a>00053 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TILESET_Y =15;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="comment">// Actions and Rules Definitions</span>
+<a name="l00056"></a>00056 <span class="preprocessor">#define ACT_JUMP          1</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span><span class="preprocessor">#define ACT_FIRE          2</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span><span class="preprocessor">#define ACT_CHG_WEAPON    3</span>
+<a name="l00059"></a>00059 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_RIGHT      4</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_LEFT       5</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_STOP       6</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span><span class="preprocessor">#define ACT_EXIT          7</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_STOPX      8</span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_STOPY      9</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_UP         10</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MV_DOWN       11</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MOUSECL_LEFT  12</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#define ACT_MOUSECL_RIGHT 13</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span><span class="preprocessor">#define ACT_K1 14</span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span><span class="preprocessor">#define ACT_K2 15</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span><span class="preprocessor">#define ACT_K3 16</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="preprocessor">#endif</span>
+<a name="l00075"></a>00075 <span class="preprocessor"></span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

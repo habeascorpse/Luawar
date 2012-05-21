@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Luawar" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/Luawar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-march=athlon-xp" />
+					<Add option="-O1" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add directory="/usr/include/lua50" />
+					<Add directory="/usr/include/Box2D" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-llua50" />
+					<Add option="-lSDL" />
+					<Add option="-lpthread" />
+					<Add option="-lluabind" />
+					<Add option="-lSDL_ttf" />
+					<Add option="-lbox2d" />
+					<Add option="-lSDL_image" />
+					<Add option="-lSDL_mixer" />
+					<Add option="-lguichan" />
+					<Add option="-lguichan_sdl" />
+					<Add option="-lSDL_gfx" />
+					<Add library="/usr/lib/libbox2d.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/Luawar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="../../../../../usr/include/lua50" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-llualib50" />
+					<Add option="-llua50" />
+					<Add option="-lSDL" />
+					<Add option="-lpthread" />
+					<Add option="-lluabind" />
+					<Add option="-lSDL_ttf" />
+					<Add option="-lbox2d" />
+					<Add option="-lSDL_image" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`sdl-config --cflags`" />
+		</Compiler>
+		<Unit filename="action.cpp" />
+		<Unit filename="action.h" />
+		<Unit filename="aicontrol.cpp" />
+		<Unit filename="aicontrol.h" />
+		<Unit filename="api.h" />
+		<Unit filename="bullet.cpp" />
+		<Unit filename="bullet.h" />
+		<Unit filename="bulletmanager.cpp" />
+		<Unit filename="bulletmanager.h" />
+		<Unit filename="button.h" />
+		<Unit filename="cb.bmp" />
+		<Unit filename="contact.h" />
+		<Unit filename="coreobjects.h" />
+		<Unit filename="defs.h" />
+		<Unit filename="editor.cpp" />
+		<Unit filename="editor.h" />
+		<Unit filename="event.cpp" />
+		<Unit filename="event.h" />
+		<Unit filename="joystick.cpp" />
+		<Unit filename="joystick.h" />
+		<Unit filename="keyboard.cpp" />
+		<Unit filename="keyboard.h" />
+		<Unit filename="layermanager.cpp" />
+		<Unit filename="layermanager.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="map.cpp" />
+		<Unit filename="map.h" />
+		<Unit filename="menu.h" />
+		<Unit filename="object.cpp" />
+		<Unit filename="object.h" />
+		<Unit filename="objectai.cpp" />
+		<Unit filename="objectai.h" />
+		<Unit filename="objectmanager.cpp" />
+		<Unit filename="objectmanager.h" />
+		<Unit filename="package.h" />
+		<Unit filename="particlecache.cpp" />
+		<Unit filename="particlecache.h" />
+		<Unit filename="particlelua.cpp" />
+		<Unit filename="particlelua.h" />
+		<Unit filename="particlesystem.cpp" />
+		<Unit filename="particlesystem.h" />
+		<Unit filename="person.cpp" />
+		<Unit filename="person.h" />
+		<Unit filename="refparticle.cpp" />
+		<Unit filename="refparticle.h" />
+		<Unit filename="renderpriority.cpp" />
+		<Unit filename="renderpriority.h" />
+		<Unit filename="rulesgame.cpp" />
+		<Unit filename="rulesgame.h" />
+		<Unit filename="sound.cpp" />
+		<Unit filename="sound.h" />
+		<Unit filename="tileset.cpp" />
+		<Unit filename="tileset.h" />
+		<Unit filename="tileseteditor.cpp" />
+		<Unit filename="tileseteditor.h" />
+		<Unit filename="video.cpp" />
+		<Unit filename="video.h" />
+		<Unit filename="videorender.cpp" />
+		<Unit filename="videorender.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

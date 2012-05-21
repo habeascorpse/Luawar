@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="action.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="1623" topLine="9" />
+	</File>
+	<File name="action.h" open="0" top="0" tabpos="10">
+		<Cursor position="2187" topLine="1" />
+	</File>
+	<File name="aicontrol.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="3326" topLine="66" />
+	</File>
+	<File name="aicontrol.h" open="0" top="0" tabpos="11">
+		<Cursor position="2144" topLine="42" />
+	</File>
+	<File name="api.h" open="0" top="0" tabpos="5">
+		<Cursor position="2928" topLine="54" />
+	</File>
+	<File name="bullet.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2329" topLine="36" />
+	</File>
+	<File name="bullet.h" open="0" top="0" tabpos="27">
+		<Cursor position="349" topLine="12" />
+	</File>
+	<File name="bulletmanager.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="395" topLine="6" />
+	</File>
+	<File name="bulletmanager.h" open="0" top="0" tabpos="28">
+		<Cursor position="625" topLine="16" />
+	</File>
+	<File name="button.h" open="0" top="0" tabpos="7">
+		<Cursor position="222" topLine="0" />
+	</File>
+	<File name="contact.h" open="0" top="0" tabpos="3">
+		<Cursor position="226" topLine="12" />
+	</File>
+	<File name="coreobjects.h" open="0" top="0" tabpos="1">
+		<Cursor position="778" topLine="24" />
+	</File>
+	<File name="defs.h" open="0" top="0" tabpos="8">
+		<Cursor position="2226" topLine="47" />
+	</File>
+	<File name="editor.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2480" topLine="38" />
+	</File>
+	<File name="editor.h" open="0" top="0" tabpos="2">
+		<Cursor position="3013" topLine="69" />
+	</File>
+	<File name="event.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="1984" topLine="35" />
+	</File>
+	<File name="event.h" open="0" top="0" tabpos="6">
+		<Cursor position="2058" topLine="43" />
+	</File>
+	<File name="joystick.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="3947" topLine="92" />
+	</File>
+	<File name="joystick.h" open="0" top="0" tabpos="33">
+		<Cursor position="0" topLine="43" />
+	</File>
+	<File name="keyboard.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="3331" topLine="88" />
+	</File>
+	<File name="keyboard.h" open="0" top="0" tabpos="34">
+		<Cursor position="0" topLine="40" />
+	</File>
+	<File name="layermanager.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="829" topLine="15" />
+	</File>
+	<File name="layermanager.h" open="0" top="0" tabpos="35">
+		<Cursor position="102" topLine="12" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="15054" topLine="536" />
+	</File>
+	<File name="map.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="9564" topLine="371" />
+	</File>
+	<File name="map.h" open="0" top="0" tabpos="5">
+		<Cursor position="4009" topLine="107" />
+	</File>
+	<File name="menu.h" open="0" top="0" tabpos="4">
+		<Cursor position="73" topLine="0" />
+	</File>
+	<File name="object.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="2577" topLine="44" />
+	</File>
+	<File name="objectai.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="2698" topLine="61" />
+	</File>
+	<File name="objectai.h" open="0" top="0" tabpos="12">
+		<Cursor position="2251" topLine="52" />
+	</File>
+	<File name="objectmanager.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="234" topLine="3" />
+	</File>
+	<File name="package.h" open="0" top="0" tabpos="6">
+		<Cursor position="1857" topLine="34" />
+	</File>
+	<File name="particlecache.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="328" topLine="7" />
+	</File>
+	<File name="particlecache.h" open="0" top="0" tabpos="39">
+		<Cursor position="167" topLine="36" />
+	</File>
+	<File name="particlelua.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2795" topLine="106" />
+	</File>
+	<File name="particlelua.h" open="0" top="0" tabpos="0">
+		<Cursor position="1223" topLine="51" />
+	</File>
+	<File name="particlesystem.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="167" topLine="0" />
+	</File>
+	<File name="particlesystem.h" open="0" top="0" tabpos="40">
+		<Cursor position="852" topLine="18" />
+	</File>
+	<File name="person.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="3094" topLine="70" />
+	</File>
+	<File name="person.h" open="0" top="0" tabpos="10">
+		<Cursor position="3654" topLine="141" />
+	</File>
+	<File name="refparticle.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="1548" topLine="32" />
+	</File>
+	<File name="refparticle.h" open="0" top="0" tabpos="6">
+		<Cursor position="467" topLine="6" />
+	</File>
+	<File name="renderpriority.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="1728" topLine="20" />
+	</File>
+	<File name="renderpriority.h" open="0" top="0" tabpos="13">
+		<Cursor position="2116" topLine="29" />
+	</File>
+	<File name="rulesgame.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="3321" topLine="70" />
+	</File>
+	<File name="rulesgame.h" open="1" top="0" tabpos="2">
+		<Cursor position="2602" topLine="50" />
+	</File>
+	<File name="sound.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="2091" topLine="35" />
+	</File>
+	<File name="sound.h" open="0" top="0" tabpos="3">
+		<Cursor position="1973" topLine="32" />
+	</File>
+	<File name="tileset.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="3894" topLine="151" />
+	</File>
+	<File name="tileset.h" open="0" top="0" tabpos="14">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="tileseteditor.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="6145" topLine="181" />
+	</File>
+	<File name="tileseteditor.h" open="0" top="0" tabpos="3">
+		<Cursor position="2929" topLine="72" />
+	</File>
+	<File name="video.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="2245" topLine="25" />
+	</File>
+	<File name="video.h" open="0" top="0" tabpos="16">
+		<Cursor position="2029" topLine="27" />
+	</File>
+	<File name="videorender.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="2534" topLine="56" />
+	</File>
+	<File name="videorender.h" open="0" top="0" tabpos="17">
+		<Cursor position="1899" topLine="22" />
+	</File>
+</CodeBlocks_layout_file>

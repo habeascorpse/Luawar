@@ -1,0 +1,156 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz   *
+ *   habeas_corpse@yahoo.com.br   *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+#ifndef PERSON_H
+#define PERSON_H
+
+#include <SDL/SDL.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include "defs.h"
+#include "package.h"
+#include "video.h"
+#include "map.h"
+#include <Box2D/Box2D.h>
+
+extern "C" {
+	#include <lua50/lua.h>
+	#include <lua50/lauxlib.h>
+	#include <lua50/lualib.h>
+
+}
+
+#include <luabind/luabind.hpp>
+
+
+/**
+	@author Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz <habeas_corpse@yahoo.com.br>
+*/
+using namespace std;
+class Person{
+	public:
+		Person(char file[],lua_State *L);
+		~Person();
+
+		void registerLua(lua_State *L);
+
+		void report_errors(lua_State *L, int status);
+		int increaseLife(int quantity);
+		int decreaseLife(int quantity);
+
+		int setLife(int quantity);
+		int setAttack(int quantity);
+		int increaseSpecial(int quantity);
+		int decreaseSpecial(int quantity);
+		void setDirection(int position);
+
+		void jump();
+		void stopJump();
+		void movRight(int quantity);
+		void movLeft(int quantity);
+		void movDown(int quantity);
+		void movUp(int quantity);
+		void stop();
+
+		void setSpeedX(int speed);
+		void setSpeedY(int speed);
+		void setAccelX(int acel);
+		void setAccelY(int acel);
+		void setMov(bool mov);
+
+		int getPosX();
+		int getPosY();
+		int getSpeedX();
+		int getSpeedY();
+		int getAccelX();
+		int getAccelY();
+		int getAttack();
+		int getSpecial();
+
+		int getLife();
+		int getDirection();
+		bool getJumping();
+		bool getMoving();
+
+		unsigned short int getSizeX();
+		unsigned short int getSizeY();
+		unsigned short int getSizeBlockX();
+		unsigned short int getSizeBlockY();
+
+		void createBody(b2World* world, int x);
+		void heroMovement();
+
+
+		bool coliderRight;
+		bool coliderLeft;
+		bool coliderUp;
+		bool coliderDown;
+		bool jumping;
+
+		Render::Package *imgPkg;
+		SDL_Surface* imgPerson[15];
+		b2Body* body;
+
+		float weight;
+		float density;
+		float friction;
+
+		unsigned int tmpWalking, tmpJumping, tmpAttack;
+
+		unsigned short int sizexImg;
+		unsigned short int sizeyImg;
+
+	protected:
+
+		void init(char file[],lua_State *L);
+
+		SDL_Rect* srcRect;
+		SDL_Rect* destRect;
+
+		short int posX,posY;
+		int speedX;
+		int speedY;
+		int acelX;
+		int acelY;
+		float jumpAcel;
+		int jumpCount;
+		unsigned int special, attack;
+		unsigned int life, direction;
+		unsigned int specialLimit, lifeLimit;
+		bool status, moving;
+		float ForceX;
+
+		char tempImg[] ;
+		int tmpLastMov;
+		int lastMov;
+
+		unsigned short int sizeBlockX;
+		unsigned short int sizeBlockY;
+
+
+		lua_State *L;
+
+
+
+};
+
+
+
+#endif

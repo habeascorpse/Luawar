@@ -1,0 +1,72 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz   *
+ *   habeas_corpse@yahoo.com.br   *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
+#include "objectai.h"
+
+using namespace std;
+
+namespace AI
+{
+  /**
+    @author Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz <habeas_corpse@yahoo.com.br>
+  */
+
+
+  //constructor
+  //it opens archive LUA with basic configurations of the AI
+  ObjectAI::ObjectAI(char* file,lua_State *L,Scenario::Map* map,Person* person,SDL_Rect* mapSrcRect,string ia) : Person(file,L)
+  {
+    this->map = map;
+    this->person = person;
+    this->mapSrcRect = mapSrcRect;
+
+    ifstream fileIA(ia.c_str());
+    if (!fileIA) {
+      cout <<"Error on open Script for IA:"<<ia<<endl;
+
+    }
+      cout <<"Load IA Script success:"<<ia<<endl;
+
+    string line;
+
+    while(getline(fileIA,line)) {
+    script += line + "\n";
+    }
+   }
+
+  //destructor;
+  ObjectAI::~ObjectAI() {
+
+  }
+
+  int ObjectAI::execObj() {
+    int s = lua_dostring(L,script.c_str());
+    this->report_errors(L,s);
+    heroMovement();
+    synchronizeImg();
+  }
+
+  void ObjectAI::synchronizeImg() {
+    imgPkg->destRect->x = getPosX() - mapSrcRect->x;
+    imgPkg->destRect->y = getPosY() - mapSrcRect->y;
+  }
+
+
+}

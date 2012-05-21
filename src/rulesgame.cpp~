@@ -1,0 +1,298 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz   *
+ *   habeas_corpse@yahoo.com.br   *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU Library General Public License as       *
+ *   published by the Free Software Foundation; either version 2 of the    *
+ *   License, or (at your option) any later version.                       *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU Library General Public     *
+ *   License along with this program; if not, write to the                 *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+#include "rulesgame.h"
+
+
+
+namespace Rules
+{
+
+	RulesGame::RulesGame(Scenario::Map* map,Scenario::Map* map2) {
+		L = lua_open();
+		luaL_openlibs(L);
+
+		  // Connect LuaBind to this lua state
+		  luabind::open(L);
+		  
+
+		event = new Events::Event(KEYBOARD);
+		render = new Render::VideoRender();
+
+		this->pkgBackground = new Render::Package;
+		this->pkgBackground->img = Render::Video::LoadBMP("../images/bg.jpg");
+		this->pkgBackground->destRect = NULL;
+		this->pkgBackground->srcRect = NULL;
+
+		this->pkgForeground = new Render::Package;
+		this->pkgForeground->img = Render::Video::LoadBMP("../images/fg.png");
+		this->pkgForeground->destRect = NULL;
+		this->pkgForeground->srcRect = NULL;
+
+		this->pkgLogo = new Render::Package;
+		this->pkgLogo->img = Render::Video::LoadBMP("../images/ico.png");
+		this->pkgLogo->destRect = new SDL_Rect;
+		this->pkgLogo->destRect->x =580;
+		this->pkgLogo->destRect->y = 0;
+		this->pkgLogo->srcRect = NULL;
+
+
+		// Person
+		person = new Person("../scripts/alan.lua",L);
+
+		this->lastMov = 0;
+		this->tmpLastMov = 0;
+
+		// Map Initialization
+		this->mapSrcRect = new SDL_Rect;
+		this->mapSrcRect->x = 0;
+		this->mapSrcRect->y = 0;
+		this->mapSrcRect->w = DF_WIDTH;
+		this->mapSrcRect->h = DF_HEIGHT;
+
+		this->mapDestRect = new SDL_Rect;
+		this->mapDestRect->x = 0;
+		this->mapDestRect->y = 0;
+		this->mapDestRect->w = DF_WIDTH;
+		this->mapDestRect->h = DF_HEIGHT;
+
+		this->map2SrcRect = new SDL_Rect;
+		this->map2SrcRect->x = 0;
+		this->map2SrcRect->y = 0;
+		this->map2SrcRect->w = DF_WIDTH;
+		this->map2SrcRect->h = DF_HEIGHT;
+
+		this->map2DestRect = new SDL_Rect;
+		this->map2DestRect->x = 0;
+		this->map2DestRect->y = 0;
+		this->map2DestRect->w = DF_WIDTH;
+		this->map2DestRect->h = DF_HEIGHT;
+
+		this->pkgMap = new Render::Package;
+		this->pkgMap2 = new Render::Package;
+
+		SDL_Surface* tempImg;
+		tempImg = Render::Video::LoadBMP(map->tileset->getImgFile().c_str());
+		this->pkgMap->img = SDL_CreateRGBSurface((SDL_HWSURFACE|SDL_SRCCOLORKEY),map->getX() * TILE_SIZE,map->getY() * TILE_SIZE,DF_DEPTH,0,0,0,0);
+		if ((tempImg != NULL) && (this->pkgMap != NULL))
+            map->drawMap(this->pkgMap->img,tempImg);
+
+
+		SDL_FreeSurface(tempImg);
+
+		tempImg = Render::Video::LoadBMP(map2->tileset->getImgFile().c_str());
+		this->pkgMap2->img = SDL_CreateRGBSurface((SDL_HWSURFACE|SDL_SRCCOLORKEY),map2->getX() * TILE_SIZE,map2->getY() * TILE_SIZE,DF_DEPTH,0,0,0,0);
+		if ((tempImg != NULL) && (this->pkgMap2 != NULL))
+			map2->drawMap(this->pkgMap2->img,tempImg);
+
+
+		SDL_FreeSurface(tempImg);
+
+		this->pkgMap->srcRect = this->mapSrcRect;
+		this->pkgMap->destRect = this->mapDestRect;
+
+		this->pkgMap2->srcRect = this->map2SrcRect;
+		this->pkgMap2->destRect = this->map2DestRect;
+
+		this->pkgMap->number = 2;
+		this->pkgMap2->number = 1;
+		person->imgPkg->number = 3;
+		this->pkgBackground->number = 0;
+		this->pkgForeground->number = 50;
+		this->pkgLogo->number = 51;
+
+		render->priority->addPackage(this->pkgForeground);
+		render->priority->addPackage(this->pkgLogo);
+		render->priority->addPackage(this->pkgBackground);
+		render->priority->addPackage(this->pkgMap2);
+		render->priority->addPackage(this->pkgMap);
+		render->priority->addPackage(person->imgPkg);
+
+		this->map = map;
+		this->map2 = map2;
+
+		midScreenX = DF_WIDTH / 2;
+		midScreenY = DF_HEIGHT / 2;
+
+		aiControl = new AI::AiControl(this->map);
+		this->ia1 = new AI::ObjectAI("../scripts/briel.lua",L,this->map,person,this->mapSrcRect,"../scripts/teste.lua");
+		ia1->imgPkg->number = 14;
+
+		this->ia2 = new AI::ObjectAI("../scripts/Lobisomens.lua",L,this->map,person,this->mapSrcRect,"../scripts/teste.lua");
+		ia2->imgPkg->number = 15;
+
+		this->ia3 = new AI::ObjectAI("../scripts/impire.lua",L,this->map,person,this->mapSrcRect,"../scripts/teste.lua");
+		ia3->imgPkg->number = 16;
+
+		this->ia4 = new AI::ObjectAI("../scripts/Bola.lua",L,this->map,person,this->mapSrcRect,"../scripts/teste.lua");
+		ia4->imgPkg->number = 17;
+
+		render->priority->addPackage(ia1->imgPkg);
+		render->priority->addPackage(ia2->imgPkg);
+		render->priority->addPackage(ia3->imgPkg);
+		render->priority->addPackage(ia4->imgPkg);
+		person->registerLua(L);
+
+		luabind::globals(L)["ia1"] = reinterpret_cast<Person *> (ia1);
+		luabind::globals(L)["ia2"] = reinterpret_cast<Person *> (ia2);
+		luabind::globals(L)["person"] = person;
+
+		aiControl->init();
+		aiControl->addAI(ia1);
+		aiControl->addAI(ia2);
+		aiControl->addAI(ia3);
+		aiControl->addAI(ia4);
+
+
+
+		b2AABB worldAABB;
+		worldAABB.lowerBound.Set(-100000.0f, -100000.0f);
+		worldAABB.upperBound.Set(100000.0f,100000.0f);
+
+		b2Vec2 gravity(0.0f,600.0f);
+		bool doSleep = false;
+
+		world = new b2World(worldAABB, gravity, doSleep);
+
+		map->createBodies(world);
+		person->createBody(world,600);
+		ia1->createBody(world,0);
+		ia2->createBody(world,150);
+		ia3->createBody(world,220);
+		ia4->createBody(world,320);
+		ia1->setDirection(ACT_MV_RIGHT);
+
+
+	}
+
+	RulesGame::~RulesGame() {
+		this->kill();
+		event->kill();
+		delete event;
+		render->kill();
+		delete render;
+	}
+
+	void RulesGame::init() {
+		this->running = true;
+		pthread_create(&thread,NULL,RulesGame::start,this);
+	}
+
+	void RulesGame::kill() {
+		this->running = false;
+		pthread_join(this->thread,NULL);
+	}
+
+	void* RulesGame::start(void *args) {
+		reinterpret_cast<RulesGame*>(args)->loop();
+		pthread_exit((void*) NULL);
+	}
+
+	void RulesGame::loop() {
+		render->init();
+		event->init();
+		float32 timeStep = 1.0f / 40.0f;
+		int32 velocityIterations = 10;
+		int32 positionIterations = 1;
+		while (this->running) {
+			this->eventAnalyzer();
+			person->heroMovement();
+			this->scrolling();
+      world->Step(timeStep, velocityIterations, positionIterations);
+			SDL_Delay(20);
+		}
+		render->priority->removePackage(0);
+		render->priority->removePackage(1);
+		render->priority->removePackage(2);
+		lua_close(L);
+	}
+
+
+	void RulesGame::eventAnalyzer() {
+
+		while (event->action.firstAction() != NULL) {
+			if (event->action.firstAction() == ACT_EXIT) {
+				this->running = false;
+				event->action.removeAction();
+			}
+			if (event->action.firstAction() == ACT_MV_RIGHT) {
+					person->setMov(true);
+					person->setDirection(ACT_MV_RIGHT);
+					event->action.removeAction();
+			}
+			if (event->action.firstAction() == ACT_MV_LEFT) {
+          person->setMov(true);
+					person->setDirection(ACT_MV_LEFT);
+					event->action.removeAction();
+
+			}
+			if (event->action.firstAction() == ACT_JUMP) {
+					person->jump();
+					event->action.removeAction();
+			}
+			if (event->action.firstAction() == ACT_MV_STOPX) {
+				person->stop();
+			}
+			if (event->action.firstAction() != 0) {
+				event->action.removeAction();
+			}
+		}
+
+	}
+
+	void RulesGame::scrolling() {
+
+	    if (( person->getPosX() >= midScreenX) && (person->getPosX() <= ((map->getX() * TILE_SIZE) - midScreenX))) {
+	        person->imgPkg->destRect->x = midScreenX;
+	        this->mapSrcRect->x = person->getPosX() - midScreenX;
+	        this->map2SrcRect->x = person->getPosX() - midScreenX;
+	    }
+        else {
+            if ((person->getPosX() + midScreenX) >= (this->map->getX() * TILE_SIZE)) {
+                person->imgPkg->destRect->x = (person->getPosX() + (midScreenX * 2)) - (map->getX() * TILE_SIZE);
+            }
+            else {
+                person->imgPkg->destRect->x = person->getPosX();
+            }
+
+        }
+
+	    if (( person->getPosY() >= midScreenY) && (person->getPosY() <= ((map->getY() * TILE_SIZE) - midScreenY))) {
+        person->imgPkg->destRect->y = midScreenY;
+
+			this->mapSrcRect->y = person->getPosY() - midScreenY;
+			this->map2SrcRect->y = person->getPosY() - midScreenY;
+
+
+
+		}
+		else {
+			if ((person->getPosY() + midScreenY) >= ((this->map->getY()) * TILE_SIZE)) {
+				person->imgPkg->destRect->y = (person->getPosY() + (midScreenY * 2)) - (map->getY() * TILE_SIZE);
+			}
+			else {
+				person->imgPkg->destRect->y = person->getPosY();
+			}
+
+		}
+
+	}
+
+
+}

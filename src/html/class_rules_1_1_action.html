@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Referência à classe Rules::Action</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>Rules</b>::<a class="el" href="class_rules_1_1_action.html">Action</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência à classe Rules::Action</h1><!-- doxytag: class="Rules::Action" --><code>#include &lt;<a class="el" href="action_8h-source.html">action.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_rules_1_1_action-members.html">Mostrar lista completa dos membros</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="99cd94704ac1488382fda48dd58cfbf3"></a><!-- doxytag: member="Rules::Action::Action" ref="99cd94704ac1488382fda48dd58cfbf3" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rules_1_1_action.html#99cd94704ac1488382fda48dd58cfbf3">Action</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor padrão de <a class="el" href="class_rules_1_1_action.html">Action</a> <br>
+ Default constructor for <a class="el" href="class_rules_1_1_action.html">Action</a> Class. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c1adfeb79da20d6ba26121ef3555acb6"></a><!-- doxytag: member="Rules::Action::~Action" ref="c1adfeb79da20d6ba26121ef3555acb6" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rules_1_1_action.html#c1adfeb79da20d6ba26121ef3555acb6">~Action</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destrutor padrão de <a class="el" href="class_rules_1_1_action.html">Action</a> <br>
+ Default Destructor of <a class="el" href="class_rules_1_1_action.html">Action</a> Class. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="75001158db0b9b0bef3f9270b98fd813"></a><!-- doxytag: member="Rules::Action::addAction" ref="75001158db0b9b0bef3f9270b98fd813" args="(int nAction)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>addAction</b> (int nAction)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c37e237410e3e860b1aea48265806e7b"></a><!-- doxytag: member="Rules::Action::firstAction" ref="c37e237410e3e860b1aea48265806e7b" args="()" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rules_1_1_action.html#c37e237410e3e860b1aea48265806e7b">firstAction</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retorna a próxima ação a ser executada neste trecho há seção crítica <br>
+ Return the next action on the list to be perfomed this passage is a critical section. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e18133695e701440847a4ea38fd39984"></a><!-- doxytag: member="Rules::Action::removeAction" ref="e18133695e701440847a4ea38fd39984" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rules_1_1_action.html#e18133695e701440847a4ea38fd39984">removeAction</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove a primeira ação da lista neste trecho há seção crítica <br>
+ Remove the fisrt action of list this passage is a critical section. <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Descrição detalhada</h2>
+<h2><a class="anchor" name="action_sec">
+Descrição</a></h2>
+Esta classe <a class="el" href="class_rules_1_1_action.html">Action</a> tem por funcionalidade armazenar todas as ações do jogo, tanto de personagens quanto de IA e chamar as funções adequadas mapeadas para ser executadas em lua. Esta classe contém seções críticas onde somente podem ser executada uma thread por vez <dl class="author" compact><dt><b>Autor:</b></dt><dd><ul>
+<li>Alan de Oliveira Silva &lt;<a href="mailto:habeas_corpse@yahoo.com.br">habeas_corpse@yahoo.com.br</a>&gt;; </li>
+<li>Gabriel Vedana Queiroz &lt;<a href="mailto:gabielvq@hotmail.com">gabielvq@hotmail.com</a>&gt;; </li>
+</ul>
+</dd></dl>
+<hr>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li>/home/alan/workspace/Luawar/src/<a class="el" href="action_8h-source.html">action.h</a><li>/home/alan/workspace/Luawar/src/action.cpp</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

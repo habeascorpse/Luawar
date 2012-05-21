@@ -1,0 +1,43 @@
+function loadResources()
+	 print("Loading Person alan.lua Resources...")
+	-- Hero State
+	ForceX = 100
+	life = 200
+	posX = 0
+	posY = 0
+	weight = 80
+	friction = 0.8
+	density = 1
+	direction  = 6
+
+	-- Hero Images
+	walkingRightA ="../images/alan/d1.png"
+	walkingRightB ="../images/alan/d2.png"
+	walkingRightC = "../images/alan/d3.png"
+	walkingRightD = "../images/alan/d4.png"
+	walkingLeftA = "../images/alan/e1.png"
+	walkingLeftB = "../images/alan/e2.png"
+	walkingLeftC = "../images/alan/e3.png"
+	walkingLeftD = "../images/alan/e4.png"
+
+	jumpingRightA = "../images/alan/d7.png"
+	jumpingRightB ="../images/alan/d3.png"
+
+	jumpingLeftA ="../images/alan/e7.png"
+	jumpingLeftB ="../images/alan/e3.png"
+	
+	attackRightA ="../images/alan/d5.png"
+	attackRightB ="../images/alan/d6.png"
+	attackLeftA ="../images/alan/e5.png"
+	attackLeftB ="../images/alan/e6.png"
+
+
+	tJumping = 100
+	tWalking = 140
+	tAttack = 100
+	print("Completed!")
+
+end
+
+
+loadResources()

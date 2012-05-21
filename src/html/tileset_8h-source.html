@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>/home/alan/workspace/Luawar/src/tileset.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Gerado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/alan/workspace/Luawar/src/tileset.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/***************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment"> *   Copyright (C) 2009 by Alan de Oliveira Silva, Thiago Luiz Rodrigues, Gabriel Vedana Queiroz   *</span>
+<a name="l00003"></a>00003 <span class="comment"> *   habeas_corpse@yahoo.com.br   *</span>
+<a name="l00004"></a>00004 <span class="comment"> *                                                                         *</span>
+<a name="l00005"></a>00005 <span class="comment"> *   This program is free software; you can redistribute it and/or modify  *</span>
+<a name="l00006"></a>00006 <span class="comment"> *   it under the terms of the GNU Library General Public License as       *</span>
+<a name="l00007"></a>00007 <span class="comment"> *   published by the Free Software Foundation; either version 2 of the    *</span>
+<a name="l00008"></a>00008 <span class="comment"> *   License, or (at your option) any later version.                       *</span>
+<a name="l00009"></a>00009 <span class="comment"> *                                                                         *</span>
+<a name="l00010"></a>00010 <span class="comment"> *   This program is distributed in the hope that it will be useful,       *</span>
+<a name="l00011"></a>00011 <span class="comment"> *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *</span>
+<a name="l00012"></a>00012 <span class="comment"> *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *</span>
+<a name="l00013"></a>00013 <span class="comment"> *   GNU General Public License for more details.                          *</span>
+<a name="l00014"></a>00014 <span class="comment"> *                                                                         *</span>
+<a name="l00015"></a>00015 <span class="comment"> *   You should have received a copy of the GNU Library General Public     *</span>
+<a name="l00016"></a>00016 <span class="comment"> *   License along with this program; if not, write to the                 *</span>
+<a name="l00017"></a>00017 <span class="comment"> *   Free Software Foundation, Inc.,                                       *</span>
+<a name="l00018"></a>00018 <span class="comment"> *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *</span>
+<a name="l00019"></a>00019 <span class="comment"> ***************************************************************************/</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifndef SCENARIOTILESET_H</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define SCENARIOTILESET_H</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "defs.h"</span>
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="keyword">using namespace </span>std;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">namespace </span>Scenario {
+<a name="l00033"></a>00033 
+<a name="l00044"></a><a class="code" href="class_scenario_1_1_tileset.html">00044</a> <span class="keyword">class </span><a class="code" href="class_scenario_1_1_tileset.html">Tileset</a>{
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00049"></a>00049                 <a class="code" href="class_scenario_1_1_tileset.html#bf0949289d0823c30037e4fc504fcc9b" title="Construtor padrão de Tileset.">Tileset</a>();
+<a name="l00054"></a>00054                 <a class="code" href="class_scenario_1_1_tileset.html#504fc69c9d680a4891979c014e8ce906" title="Destrutor padrão de Tileset, que elimina todos os ponteiros.">~Tileset</a>();
+<a name="l00060"></a>00060                 <span class="keywordtype">bool</span> <a class="code" href="class_scenario_1_1_tileset.html#5bf5490a700e6e814abae3fa7cd8f761" title="Função que carrega todos as propriedades do tile site de um arquivo passado por...">loadTileset</a>(<span class="keywordtype">string</span> filename);
+<a name="l00066"></a>00066                 <span class="keywordtype">bool</span> <a class="code" href="class_scenario_1_1_tileset.html#44c0d6e7ab811b35053fcc89d0825a41" title="Função que salva todos as propriedades do tile site em um arquivo passado por parâmetro...">saveTileset</a>(<span class="keywordtype">string</span> filename);
+<a name="l00070"></a>00070                 <span class="keywordtype">string</span> <a class="code" href="class_scenario_1_1_tileset.html#7981566a76eca51183a8b02d20753210" title="Retorna o nome do arquivo de Tileset.">getFileName</a>();
+<a name="l00074"></a>00074                 <span class="keywordtype">bool</span> <a class="code" href="class_scenario_1_1_tileset.html#8b3c5642555015941359b0731a9fd355" title="Inseri a variável de imagem do Tileset.">setImgFile</a>(<span class="keywordtype">string</span> imgFile);
+<a name="l00078"></a>00078                 <span class="keywordtype">string</span> <a class="code" href="class_scenario_1_1_tileset.html#e100e7008a8da47620baef3af3082dd7" title="Retorna a variável de imagem do Tileset.">getImgFile</a>();
+<a name="l00082"></a>00082                 <span class="comment">//SDL_Surface* img;</span>
+<a name="l00083"></a>00083                 
+<a name="l00087"></a>00087                 <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_tileset.html#ded8d0c98d470b89ff026ce76904f407" title="Retorna a variável de imagem do Tileset.">matrixToBase8</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);
+<a name="l00088"></a>00088                 
+<a name="l00092"></a>00092                 <span class="keywordtype">int</span> <a class="code" href="class_scenario_1_1_tileset.html#7c9e438e655c7153eea0fe47fe08177f" title="Retorna o valor do tile.">getProperty</a>(<span class="keywordtype">int</span> base8);
+<a name="l00093"></a>00093 
+<a name="l00097"></a>00097                 <span class="keywordtype">void</span> <a class="code" href="class_scenario_1_1_tileset.html#9d5875b5e87e4e7b17cea0884c27fa82" title="Seta o valor do Tileset.">setProperty</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y,<span class="keywordtype">int</span> value);
+<a name="l00098"></a>00098         <span class="keyword">private</span>:
+<a name="l00099"></a>00099                 
+<a name="l00100"></a>00100                 <span class="keywordtype">int</span> procString(<span class="keywordtype">string</span> str);
+<a name="l00101"></a>00101                 
+<a name="l00102"></a>00102                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> strcount;
+<a name="l00103"></a>00103                 <span class="keywordtype">string</span> buffer;
+<a name="l00104"></a>00104                 <span class="keywordtype">char</span> bf[5];
+<a name="l00105"></a>00105                 <span class="keywordtype">string</span> fileName;
+<a name="l00106"></a>00106                 <span class="keywordtype">string</span> imgFile;
+<a name="l00107"></a>00107                 <span class="keywordtype">int</span> tilePropertie[8][15];
+<a name="l00108"></a>00108                 <span class="keywordtype">int</span> flag;
+<a name="l00109"></a>00109                 <span class="keywordtype">int</span> px,py;
+<a name="l00110"></a>00110 };
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 }
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Gerado em Sun Nov 29 00:33:32 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>
